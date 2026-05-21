@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #e5e5e5;
+  --font-sans: var(--font-inter);
+  --font-klee: var(--font-klee-one);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-klee: var(--font-klee);
+}
+
+/* Custom global styles for cinematic portfolio */
+html,
+body {
+  background-color: #000000;
+  color: #a0a0a0; /* soft gray primary typography */
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Base scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
+/* Text selections */
+::selection {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Lenis smooth scrolling helper */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
