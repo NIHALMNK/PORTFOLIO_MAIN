@@ -23,7 +23,7 @@ export default function FooterLinks() {
           transition={{ duration: 1 }}
           className="text-[9px] tracking-[0.25em] font-light text-neutral-600 uppercase select-none"
         >
-          © NIHAl_MNK
+          © NIHAL_MNK
         </motion.div>
 
         {/* Right Side: Stacked links */}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
@@ -9,6 +9,13 @@ import SmoothScroll from "@/components/SmoothScroll";
 // Set up Google Font Inter for clean editorial sans-serif typography
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["200", "300", "400"],
+});
+
+// Set up Google Font Manrope for ultra-thin geometric editorial sans-serif typography
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["200", "300", "400"],
 });
@@ -43,13 +50,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${kleeOne.variable} h-full bg-[#000000] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
+      className={`${inter.variable} ${manrope.variable} ${kleeOne.variable} h-full bg-[#000000] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
     >
       <body className="min-h-full flex flex-col font-sans relative">
         <SmoothScroll>
           <div className="min-h-screen flex flex-col w-full bg-[#000000] overflow-hidden">
             {/* Top-Right Toggle */}
-            <div className="absolute top-0 right-0 z-50">
+            <div className="absolute top-0 right-0 z-50 hidden lg:block">
               <ThemeToggle />
             </div>
 
@@ -57,7 +64,7 @@ export default function RootLayout({
             <Sidebar />
 
             {/* Main Content Area */}
-            <div className="flex-1 w-full lg:pl-48">
+            <div className="flex-1 w-full lg:pl-[160px]">
               {children}
             </div>
           </div>

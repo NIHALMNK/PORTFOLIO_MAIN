@@ -12,6 +12,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-klee: var(--font-klee);
+  --font-manrope: var(--font-manrope);
 }
 
 /* Custom global styles for cinematic portfolio */
