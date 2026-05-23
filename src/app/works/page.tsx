@@ -70,7 +70,7 @@ export default function WorksPage() {
                     className="block w-full group overflow-hidden bg-neutral-950 border border-white/5 relative aspect-video shadow-[0_0_60px_rgba(0,0,0,0.2)]"
                   >
                     <Image
-                      src={project.image}
+                      src={project.coverImage || "/projects/placeholder.png"}
                       alt={`${project.title} project screenshot`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 60vw"
@@ -110,7 +110,7 @@ export default function WorksPage() {
 
                   {/* Tech Stack inline list */}
                   <div className="text-[11px] tracking-[0.12em] uppercase text-white/35 font-[300] mb-8 relative z-10 antialiased">
-                    {project.techStack}
+                    {project.techStack.flatMap((group) => group.items).join(" · ")}
                   </div>
 
                   {/* Call to Action */}
