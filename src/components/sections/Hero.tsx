@@ -66,10 +66,10 @@ export default function Hero() {
       </section>
 
       {/* DESKTOP LAYOUT */}
-      <section className="relative w-full min-h-screen px-8 lg:px-16 pt-24 hidden lg:block">
-        <div className="hidden lg:flex items-start justify-between w-full">
+      <section className="relative w-full min-h-screen px-8 lg:px-16 pt-24 hidden lg:block overflow-x-hidden">
+        <div className="hidden lg:grid lg:grid-cols-12 lg:gap-x-8 items-start w-full">
           {/* LEFT HERO BLOCK */}
-          <div className="max-w-[720px] ml-6">
+          <div className="lg:col-span-5 lg:col-start-1 ml-6">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -113,15 +113,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
-            className="w-[520px] mr-10 mt-16 flex-shrink-0"
+            className="lg:col-span-5 lg:col-start-8 lg:pl-24 lg:pt-16 w-full max-w-[620px] xl:max-w-[720px] 2xl:max-w-[780px] mr-10 mt-16 lg:mt-0 flex-shrink-0"
           >
-            <div className="relative w-full mb-10">
-              <div className="absolute top-1/2 left-0 w-full h-px bg-white/10 -translate-y-1/2" />
-              <h2 className="relative inline-block bg-[#151515] px-5 text-[18px] tracking-[0.16em] font-[300] text-[#d8d8d8] uppercase antialiased">
-                {siteConfig.name}
-              </h2>
-            </div>
-            <p className="text-[18px] leading-[2] tracking-[0.03em] text-white/65 font-[300] max-w-[520px] antialiased subpixel-antialiased">
+            <h2 className="text-[18px] lg:text-[20px] font-[300] tracking-[0.12em] uppercase text-[#d8d8d8] mb-4 antialiased">
+              {siteConfig.name}
+            </h2>
+
+            {/* Premium divider directly under the name */}
+            <div className="w-full max-w-[680px] h-[1px] bg-white/18 mb-10" />
+
+            <p className="text-[18px] lg:text-[20px] leading-[1.9] tracking-[0.03em] font-[300] text-white/72 max-w-[760px] break-words whitespace-normal antialiased subpixel-antialiased">
               {siteConfig.description}
             </p>
           </motion.div>
