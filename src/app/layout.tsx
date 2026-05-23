@@ -37,6 +37,18 @@ const kleeOne = localFont({
   variable: "--font-klee-one",
 });
 
+// Set up Local Font Quicksand for the desktop Hero typography
+const quicksand = localFont({
+  src: [
+    {
+      path: "../../public/Quicksand/static/Quicksand-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-quicksand",
+});
+
 export const metadata: Metadata = {
   title: "Nihal Keedath | Web Developer - MERN",
   description: "Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.",
@@ -50,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} ${kleeOne.variable} h-full bg-[#151515] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
+      className={`${inter.variable} ${manrope.variable} ${kleeOne.variable} ${quicksand.variable} h-full bg-[#151515] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
     >
       <body className="min-h-full flex flex-col font-sans relative">
         <SmoothScroll>

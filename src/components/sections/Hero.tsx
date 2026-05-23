@@ -13,12 +13,12 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
           className="lg:col-span-5 flex flex-col items-start"
         >
-          <h1 className="font-manrope text-[clamp(40px,10vw,64px)] lg:text-[clamp(56px,5.5vw,80px)] font-[200] text-[#d8d8d8] tracking-[0.18em] leading-[0.88] uppercase select-none antialiased subpixel-antialiased">
+          <h1 className="font-quicksand text-[clamp(40px,10vw,64px)] lg:text-[clamp(78px,9vw,150px)] font-[300] text-[#d8d8d8] tracking-[0.18em] leading-[0.88] uppercase select-none antialiased subpixel-antialiased">
             NIHAL
             <br />
             KEEDATH
           </h1>
-          <p className="mt-6 text-[11px] font-[200] tracking-[0.2em] text-white/40 uppercase select-none antialiased">
+          <p className="mt-6 text-[14px] md:text-[20px] font-[200] tracking-[0.2em] text-white/40 uppercase select-none antialiased">
             {siteConfig.title}
           </p>
         </motion.div>

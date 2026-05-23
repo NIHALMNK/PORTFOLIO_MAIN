@@ -47,6 +47,7 @@ export default function Motivation() {
               src="/nihalMNK.png"
               alt="Mohammed Nihal portrait"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               priority
               className="object-cover grayscale contrast-[1.18] brightness-[0.88] transition-all duration-700 hover:scale-[1.02] hover:contrast-[1.25]"
             />
