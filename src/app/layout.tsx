@@ -50,11 +50,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} ${kleeOne.variable} h-full bg-[#000000] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
+      className={`${inter.variable} ${manrope.variable} ${kleeOne.variable} h-full bg-[#151515] text-[#a0a0a0] antialiased selection:bg-neutral-800/50 selection:text-white`}
     >
       <body className="min-h-full flex flex-col font-sans relative">
         <SmoothScroll>
-          <div className="min-h-screen flex flex-col w-full bg-[#000000] overflow-hidden">
+          <div className="min-h-screen flex flex-col w-full bg-[#151515] overflow-hidden">
             {/* Top-Right Toggle */}
             <div className="absolute top-0 right-0 z-50 hidden lg:block">
               <ThemeToggle />

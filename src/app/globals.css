@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #151515;
   --foreground: #e5e5e5;
   --font-sans: var(--font-inter);
   --font-klee: var(--font-klee-one);
@@ -18,7 +18,7 @@
 /* Custom global styles for cinematic portfolio */
 html,
 body {
-  background-color: #000000;
+  background-color: #151515;
   color: #a0a0a0; /* soft gray primary typography */
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
@@ -30,7 +30,7 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #151515;
 }
 ::-webkit-scrollbar-thumb {
   background: #1a1a1a;

@@ -45,7 +45,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[140px] flex-col justify-between py-12 px-4 z-40 bg-black text-[#5f5f5f] antialiased select-none items-center">
+      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[140px] flex-col justify-between py-12 px-4 z-40 bg-[#151515] text-[#5f5f5f] antialiased select-none items-center">
         {/* Navigation & Social Icons Stack grouped and centered vertically */}
         <div className="flex flex-col gap-10 my-auto items-center">
           {/* Navigation */}
@@ -101,7 +101,7 @@ export default function Sidebar() {
       </aside>
 
       {/* Mobile Top Bar (64px, pure black) */}
-      <header className="lg:hidden fixed top-0 left-0 w-full h-16 z-40 bg-black border-b border-neutral-900/40 px-6 flex items-center justify-between text-[#a0a0a0] select-none">
+      <header className="lg:hidden fixed top-0 left-0 w-full h-16 z-40 bg-[#151515] border-b border-neutral-900/40 px-6 flex items-center justify-between text-[#a0a0a0] select-none">
         {/* Left: Hamburger menu */}
         <button
           onClick={() => setIsMenuOpen(true)}
@@ -137,7 +137,7 @@ export default function Sidebar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="lg:hidden fixed inset-0 z-50 bg-black flex flex-col justify-between px-8 py-16 select-none"
+            className="lg:hidden fixed inset-0 z-50 bg-[#151515] flex flex-col justify-between px-8 py-16 select-none"
           >
             {/* Top Close Bar */}
             <div className="absolute top-6 right-6">
