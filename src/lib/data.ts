@@ -43,7 +43,11 @@ export const projects = [
 ];
 
 export const skills = {
-  frontend: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Motion", "GSAP", "React Three Fiber", "Zustand"],
-  backend: ["TypeScript", "Node.js", "Python", "Java", "C++", "FastAPI", "SQL"],
-  tools: ["Windows", "VSCode", "Cursor", "Git", "Figma", "Adobe Fresco", "Blender"],
+  languages: ["JavaScript (ES6+)", "TypeScript", "SQL", "NoSQL"],
+  frontend: ["React.js", "Next.js", "Redux", "TailwindCSS", "Bootstrap", "HTML5", "CSS3", "EJS"],
+  backend: ["Node.js", "Express.js", "REST APIs", "MVC Architecture"],
+  databases: ["MongoDB", "PostgreSQL", "Redis", "Firebase"],
+  devops: ["AWS EC2", "Vercel", "Nginx"],
+  realtime: ["WebRTC", "Socket.IO"],
+  tools: ["Git", "GitHub", "Postman", "Cloudinary", "Fabric.js", "Monaco Editor", "Tiptap Editor"]
 };
