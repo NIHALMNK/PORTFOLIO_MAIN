@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
 
       {/* Spacing between Hero and Motivation is generous */}
-      <div className="w-full my-12" />
+      <div className="w-full my-12 lg:my-0" />
 
       {/* Motivation/Portrait Editorial Area */}
       <Motivation />

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Motivation() {
   return (
-    <section className="w-full max-w-[1600px] mx-auto px-10 lg:px-24 py-32 lg:py-40">
+    <section className="w-full max-w-[1600px] mx-auto px-10 lg:px-24 pt-8 lg:pt-12 pb-32 lg:pb-40">
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-16 lg:gap-0 items-start w-full">
         {/* Left Editorial Column */}
         <motion.div

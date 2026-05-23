@@ -66,7 +66,7 @@ export default function Hero() {
       </section>
 
       {/* DESKTOP LAYOUT */}
-      <section className="relative w-full min-h-screen px-8 lg:px-16 pt-24 hidden lg:block overflow-x-hidden">
+      <section className="relative w-full px-8 lg:px-16 pt-24 pb-[80px] hidden lg:block overflow-x-hidden">
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-x-8 items-start w-full">
           {/* LEFT HERO BLOCK */}
           <div className="lg:col-span-5 lg:col-start-1 ml-6">
