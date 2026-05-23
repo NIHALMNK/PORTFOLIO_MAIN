@@ -12,7 +12,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="flex flex-col items-start w-full py-8 md:py-16"
+      className="flex flex-col items-start w-full pb-8 md:pb-16"
     >
       {/* Editorial Hero Area */}
       <Hero />

@@ -45,7 +45,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[140px] flex-col justify-between py-12 px-4 z-40 bg-[#151515] text-[#5f5f5f] antialiased select-none items-center">
+      <aside className="hidden lg:flex fixed left-0 2xl:left-[calc((100vw-1536px)/2)] top-0 h-screen w-[140px] flex-col justify-between py-12 px-4 z-40 bg-[#151515] text-[#5f5f5f] antialiased select-none items-center">
         {/* Navigation & Social Icons Stack grouped and centered vertically */}
         <div className="flex flex-col gap-10 my-auto items-center">
           {/* Navigation */}

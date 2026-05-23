@@ -67,7 +67,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning={true} className="min-h-full flex flex-col font-sans relative">
         <SmoothScroll>
-          <div className="min-h-screen flex flex-col w-full bg-[#151515] overflow-hidden">
+          <div className="min-h-screen flex flex-col w-full bg-[#151515] overflow-hidden max-w-screen-2xl mx-auto relative border-x border-neutral-900/10 shadow-2xl">
             {/* Top-Right Toggle */}
             <div className="absolute top-0 right-0 z-50 hidden lg:block">
               <ThemeToggle />
