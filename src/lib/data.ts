@@ -6,7 +6,7 @@ export const siteConfig = {
   email: "mohammednihal.dev@gmail.com",
   github: "https://github.com/NIHALMNK",
   linkedin: "https://www.linkedin.com/in/mohammednihalk6061/",
-  instagram: "https://instagram.com", // standard fallback
+  instagram: "https://instagram.com",
 };
 
 export const projects = [
