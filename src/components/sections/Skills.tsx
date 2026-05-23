@@ -20,7 +20,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="px-6 md:px-12 lg:px-20 py-20 w-full max-w-6xl">
+    <section className="w-full max-w-[1500px] mx-auto px-6 md:px-10 lg:px-20 py-20 md:py-28 overflow-x-hidden">
       <div className="flex flex-col w-full">
         {/* Section Heading */}
         <motion.div
@@ -30,32 +30,33 @@ export default function Skills() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
           className="w-full"
         >
-          <h2 className="text-[10px] tracking-[0.3em] font-light text-neutral-300 uppercase mb-3">
+          <h2 className="font-quicksand text-[32px] md:text-[48px] font-[200] tracking-[0.08em] uppercase text-white/90 antialiased">
             SKILLS
           </h2>
-          {/* Full-width thin horizontal divider */}
-          <div className="w-full h-[1px] bg-neutral-900 mb-12" />
+          {/* Subtle divider line */}
+          <div className="w-full h-[1px] bg-white/20 mt-3 mb-16" />
         </motion.div>
 
         {/* 3-Column Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-x-24 items-start">
+          
           {/* Frontend Category */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-0 items-start w-full"
           >
-            <h3 className="text-[10px] tracking-[0.25em] font-light text-neutral-400 uppercase">
+            <h3 className="font-quicksand text-[24px] lg:text-[28px] font-[200] tracking-[0.08em] uppercase text-white/85 mb-8 antialiased">
               FRONTEND
             </h3>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-4 w-full justify-start">
               {skills.frontend.map((skill, idx) => (
                 <motion.span
                   key={idx}
                   variants={itemVariants}
-                  className="px-3.5 py-1.5 rounded-full border border-neutral-900 bg-neutral-950/20 text-[10px] md:text-xs font-light text-neutral-500 hover:text-neutral-200 hover:border-neutral-800 transition-all duration-300 select-none cursor-default"
+                  className="px-5 py-2 md:px-6 md:py-3 rounded-full border border-white/30 bg-transparent text-[15px] md:text-[20px] font-[300] tracking-[0.02em] text-white/80 hover:border-white/60 hover:text-white transition-all duration-300 select-none cursor-default whitespace-nowrap"
                 >
                   {skill}
                 </motion.span>
@@ -69,17 +70,17 @@ export default function Skills() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-0 items-start w-full"
           >
-            <h3 className="text-[10px] tracking-[0.25em] font-light text-neutral-400 uppercase">
+            <h3 className="font-quicksand text-[24px] lg:text-[28px] font-[200] tracking-[0.08em] uppercase text-white/85 mb-8 antialiased">
               BACKEND
             </h3>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-4 w-full justify-start">
               {skills.backend.map((skill, idx) => (
                 <motion.span
                   key={idx}
                   variants={itemVariants}
-                  className="px-3.5 py-1.5 rounded-full border border-neutral-900 bg-neutral-950/20 text-[10px] md:text-xs font-light text-neutral-500 hover:text-neutral-200 hover:border-neutral-800 transition-all duration-300 select-none cursor-default"
+                  className="px-5 py-2 md:px-6 md:py-3 rounded-full border border-white/30 bg-transparent text-[15px] md:text-[20px] font-[300] tracking-[0.02em] text-white/80 hover:border-white/60 hover:text-white transition-all duration-300 select-none cursor-default whitespace-nowrap"
                 >
                   {skill}
                 </motion.span>
@@ -93,23 +94,24 @@ export default function Skills() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-0 items-start w-full"
           >
-            <h3 className="text-[10px] tracking-[0.25em] font-light text-neutral-400 uppercase">
+            <h3 className="font-quicksand text-[24px] lg:text-[28px] font-[200] tracking-[0.08em] uppercase text-white/85 mb-8 antialiased">
               TOOLS
             </h3>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-4 w-full justify-start">
               {skills.tools.map((skill, idx) => (
                 <motion.span
                   key={idx}
                   variants={itemVariants}
-                  className="px-3.5 py-1.5 rounded-full border border-neutral-900 bg-neutral-950/20 text-[10px] md:text-xs font-light text-neutral-500 hover:text-neutral-200 hover:border-neutral-800 transition-all duration-300 select-none cursor-default"
+                  className="px-5 py-2 md:px-6 md:py-3 rounded-full border border-white/30 bg-transparent text-[15px] md:text-[20px] font-[300] tracking-[0.02em] text-white/80 hover:border-white/60 hover:text-white transition-all duration-300 select-none cursor-default whitespace-nowrap"
                 >
                   {skill}
                 </motion.span>
               ))}
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

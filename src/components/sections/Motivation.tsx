@@ -5,8 +5,9 @@ import Image from "next/image";
 
 export default function Motivation() {
   return (
-    <section className="w-full max-w-[1600px] mx-auto px-10 lg:px-24 pt-8 lg:pt-12 pb-32 lg:pb-40">
-      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-16 lg:gap-0 items-start w-full">
+    <section className="w-full max-w-[1600px] mx-auto px-6 md:px-10 lg:px-24 pt-20 md:pt-32 lg:pt-12 pb-20 md:pb-32 lg:pb-40 overflow-x-hidden">
+      <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-0 items-start w-full">
+        
         {/* Left Editorial Column */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,9 +20,9 @@ export default function Motivation() {
             MOTIVATION
           </h2>
           {/* Thin horizontal divider below heading */}
-          <div className="w-full max-w-[680px] h-[1px] bg-white/18 mt-5 mb-12" />
+          <div className="w-full max-w-[680px] h-[1px] bg-white/18 mt-5 mb-10 lg:mb-12" />
           
-          <div className="flex flex-col space-y-5 text-[17px] leading-[1.8] lg:text-[18px] lg:leading-[1.9] tracking-[0.03em] font-[300] text-white/72 max-w-[720px]">
+          <div className="flex flex-col space-y-5 text-[16px] leading-[1.9] lg:text-[18px] lg:leading-[1.9] tracking-[0.03em] font-[300] text-white/72 max-w-full lg:max-w-[720px] antialiased">
             <p>
               I&apos;m a full-stack developer with a growing focus on backend development.
             </p>
@@ -42,7 +43,7 @@ export default function Motivation() {
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] as const }}
           className="lg:col-span-6 lg:col-start-7 lg:justify-self-end lg:pt-10 w-full"
         >
-          <div className="relative w-full max-w-[720px] aspect-[16/9] overflow-hidden bg-neutral-950 rounded-none shadow-[0_0_80px_rgba(0,0,0,0.25)]">
+          <div className="relative w-full max-w-full lg:max-w-[720px] aspect-[16/9] overflow-hidden bg-neutral-950 rounded-none shadow-[0_0_80px_rgba(0,0,0,0.25)]">
             <Image
               src="/nihalMNK.png"
               alt="Mohammed Nihal portrait"
