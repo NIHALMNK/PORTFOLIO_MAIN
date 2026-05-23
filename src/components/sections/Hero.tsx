@@ -6,9 +6,7 @@ import { siteConfig } from "@/lib/data";
 export default function Hero() {
   return (
     <section className="relative w-full max-w-6xl lg:ml-0 lg:mr-auto px-6 md:px-12 lg:pl-2 lg:pr-20 pt-24 lg:pt-32 pb-16">
-      {/* Grid container: Flex on mobile, Grid on desktop */}
       <div className="flex flex-col lg:grid lg:grid-cols-12 gap-10 lg:gap-x-8 items-start">
-        {/* Left Side Name Block */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +23,6 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Right Side Description Block */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +31,7 @@ export default function Hero() {
         >
           {/* Ultra subtle restrained horizontal divider */}
           <div className="w-full max-w-[320px] lg:max-w-[420px] h-[1px] bg-white/10 mb-4" />
-          
+
           <h2 className="text-[11px] font-[300] tracking-[0.14em] text-[#d8d8d8] uppercase mb-4 antialiased">
             {siteConfig.name}
           </h2>

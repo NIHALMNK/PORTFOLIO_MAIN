@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 import FooterLinks from "@/components/sections/FooterLinks";
-import { FiArrowUpRight, FiMail, FiLinkedin, FiGithub, FiInstagram } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 
 export default function ContactPage() {
   const contactLinks = [
-    { label: "Email", icon: FiMail, value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { label: "LinkedIn", icon: FiLinkedin, value: "mohammednihalk6061", href: siteConfig.linkedin },
-    { label: "GitHub", icon: FiGithub, value: "NIHALMNK", href: siteConfig.github },
-    { label: "Instagram", icon: FiInstagram, value: "@nihal_mnk", href: siteConfig.instagram },
+    { label: "Email", icon: "mdi:email-outline", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+    { label: "LinkedIn", icon: "mdi:linkedin", value: "mohammednihalk6061", href: siteConfig.linkedin },
+    { label: "GitHub", icon: "mdi:github", value: "NIHALMNK", href: siteConfig.github },
+    { label: "Instagram", icon: "mdi:instagram", value: "@nihal_mnk", href: siteConfig.instagram },
   ];
 
   return (
@@ -53,7 +53,6 @@ export default function ContactPage() {
             {/* Structured Contact Link Cards */}
             <div className="flex flex-col gap-6">
               {contactLinks.map((item, idx) => {
-                const Icon = item.icon;
                 return (
                   <a
                     key={idx}
@@ -63,7 +62,7 @@ export default function ContactPage() {
                     className="group relative flex items-center justify-between py-4 border-b border-neutral-950 hover:border-neutral-900/60 transition-colors duration-300 w-full"
                   >
                     <div className="flex items-center gap-4">
-                      <Icon className="w-3.5 h-3.5 text-neutral-600 group-hover:text-neutral-300 transition-colors duration-300" />
+                      <Icon icon={item.icon} className="w-3.5 h-3.5 text-neutral-600 group-hover:text-neutral-300 transition-colors duration-300" />
                       <div className="flex flex-col">
                         <span className="text-[10px] tracking-[0.2em] text-neutral-600 group-hover:text-neutral-400 transition-colors duration-300 uppercase">
                           {item.label}
@@ -73,7 +72,7 @@ export default function ContactPage() {
                         </span>
                       </div>
                     </div>
-                    <FiArrowUpRight className="w-3.5 h-3.5 text-neutral-700 group-hover:text-neutral-300 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <Icon icon="feather:arrow-up-right" className="w-3.5 h-3.5 text-neutral-700 group-hover:text-neutral-300 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 );
               })}

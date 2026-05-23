@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FiLinkedin, FiInstagram, FiGithub, FiMail, FiMenu, FiX } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 import { siteConfig } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -20,10 +20,26 @@ export default function Sidebar() {
   ];
 
   const socials = [
-    { icon: FiLinkedin, url: siteConfig.linkedin, label: "LinkedIn" },
-    { icon: FiInstagram, url: siteConfig.instagram, label: "Instagram" },
-    { icon: FiGithub, url: siteConfig.github, label: "GitHub" },
-    { icon: FiMail, url: `mailto:${siteConfig.email}`, label: "Email" },
+    {
+      icon: "mdi:linkedin",
+      url: siteConfig.linkedin,
+      label: "LinkedIn",
+    },
+    {
+      icon: "mdi:instagram",
+      url: siteConfig.instagram,
+      label: "Instagram",
+    },
+    {
+      icon: "mdi:github",
+      url: siteConfig.github,
+      label: "GitHub",
+    },
+    {
+      icon: "mdi:email-outline",
+      url: `mailto:${siteConfig.email}`,
+      label: "Email",
+    },
   ];
 
   return (
@@ -60,7 +76,6 @@ export default function Sidebar() {
           {/* Social Icons Stack */}
           <div className="flex flex-col gap-[12px] pl-[1px]">
             {socials.map((soc, idx) => {
-              const Icon = soc.icon;
               return (
                 <a
                   key={idx}
@@ -70,7 +85,10 @@ export default function Sidebar() {
                   aria-label={soc.label}
                   className="text-[#5f5f5f] opacity-45 hover:opacity-85 hover:text-[#d8d8d8] transition-all duration-300 ease-out w-fit"
                 >
-                  <Icon className="w-[13px] h-[13px] stroke-[1.5]" />
+                  <Icon
+                    icon={soc.icon}
+                    className="w-[13px] h-[13px]"
+                  />
                 </a>
               );
             })}
@@ -91,7 +109,7 @@ export default function Sidebar() {
           className="text-[#5f5f5f] hover:text-[#d8d8d8] transition-colors duration-300 focus:outline-none"
           aria-label="Open navigation menu"
         >
-          <FiMenu className="w-5 h-5 stroke-[1.5]" />
+          <Icon icon="feather:menu" className="w-5 h-5" />
         </button>
 
         {/* Right: Mock theme switch (capsule design matching desktop) */}
@@ -129,7 +147,7 @@ export default function Sidebar() {
                 className="text-[#5f5f5f] hover:text-[#d8d8d8] transition-colors duration-300 focus:outline-none"
                 aria-label="Close navigation menu"
               >
-                <FiX className="w-5 h-5 stroke-[1.5]" />
+                <Icon icon="feather:x" className="w-5 h-5" />
               </button>
             </div>
 
@@ -155,7 +173,6 @@ export default function Sidebar() {
             {/* Social Icons at bottom left */}
             <div className="flex flex-col gap-4 pl-[1px] mb-2">
               {socials.map((soc, idx) => {
-                const Icon = soc.icon;
                 return (
                   <a
                     key={idx}
@@ -166,7 +183,10 @@ export default function Sidebar() {
                     onClick={() => setIsMenuOpen(false)}
                     className="text-[#5f5f5f] opacity-45 hover:opacity-85 hover:text-[#d8d8d8] transition-all duration-300 ease-out w-fit"
                   >
-                    <Icon className="w-[14px] h-[14px] stroke-[1.5]" />
+                    <Icon
+                      icon={soc.icon}
+                      className="w-[14px] h-[14px]"
+                    />
                   </a>
                 );
               })}

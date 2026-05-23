@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { projects } from "@/lib/data";
 import FooterLinks from "@/components/sections/FooterLinks";
-import { FiGithub, FiArrowUpRight } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 
 export default function WorksPage() {
   const containerVariants = {
@@ -92,9 +92,9 @@ export default function WorksPage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-[10px] tracking-[0.2em] font-light text-neutral-400 hover:text-neutral-100 transition-colors duration-300 w-fit mt-1 uppercase"
               >
-                <FiGithub className="w-3.5 h-3.5" />
+                <Icon icon="mdi:github" className="w-3.5 h-3.5" />
                 <span>Source Code</span>
-                <FiArrowUpRight className="w-3 h-3 text-neutral-600 group-hover:text-neutral-300 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <Icon icon="feather:arrow-up-right" className="w-3 h-3 text-neutral-600 group-hover:text-neutral-300 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
