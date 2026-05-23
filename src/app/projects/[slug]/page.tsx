@@ -333,7 +333,6 @@ export default function ProjectDetailPage({ params }: PageProps) {
                   alt={`${project.title} active showcase screen`}
                   fill
                   sizes="100vw"
-                  priority
                   className="object-cover grayscale contrast-[1.10] brightness-[0.90] hover:grayscale-0 hover:contrast-[1.05] hover:brightness-[0.95] transition-all duration-700"
                 />
               </motion.div>

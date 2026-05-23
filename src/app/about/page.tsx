@@ -82,14 +82,14 @@ export default function AboutPage() {
               variants={fadeUp}
               className="block lg:hidden w-full mb-12"
             >
-              <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-950 border border-white/5">
+              <div className="w-full overflow-hidden bg-neutral-950 border border-white/5">
                 <Image
                   src="/about_portrait.png"
                   alt="Mohammed Nihal portrait"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  width={480}
+                  height={600}
                   priority
-                  className="object-cover grayscale contrast-[1.12] brightness-[0.92]"
+                  className="w-full h-auto object-cover grayscale contrast-[1.12] brightness-[0.92]"
                 />
               </div>
             </motion.div>
@@ -275,15 +275,15 @@ export default function AboutPage() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[460px] aspect-[4/5] overflow-hidden bg-neutral-950 border border-white/5 shadow-[0_0_80px_rgba(0,0,0,0.3)] group"
+              className="w-full max-w-[460px] overflow-hidden bg-neutral-950 border border-white/5 shadow-[0_0_80px_rgba(0,0,0,0.3)] group"
             >
               <Image
                 src="/about_portrait.png"
                 alt="Mohammed Nihal portrait"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                width={460}
+                height={575}
                 priority
-                className="object-cover grayscale contrast-[1.12] brightness-[0.92] transition-all duration-700 group-hover:scale-[1.02] group-hover:contrast-[1.20]"
+                className="w-full h-auto object-cover grayscale contrast-[1.12] brightness-[0.92] transition-all duration-700 group-hover:scale-[1.02] group-hover:contrast-[1.20]"
               />
             </motion.div>
             

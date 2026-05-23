@@ -74,7 +74,7 @@ export default function WorksPage() {
                       alt={`${project.title} project screenshot`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 60vw"
-                      priority={idx < 2}
+                      priority={idx === 0}
                       className="object-cover grayscale contrast-[1.12] brightness-[0.88] transition-all duration-700 group-hover:scale-[1.02] group-hover:grayscale-0 group-hover:contrast-[1.05] group-hover:brightness-[0.95]"
                     />
                   </Link>
