@@ -48,10 +48,12 @@ const quicksand = localFont({
   ],
   variable: "--font-quicksand",
 });
-
 export const metadata: Metadata = {
-  title: "Nihal Keedath | Web Developer - MERN",
+  title: "Nihal Keedath | MERN Developer",
   description: "Freelance MERN stack developer with real client experience, focused on building scalable and maintainable web applications.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
