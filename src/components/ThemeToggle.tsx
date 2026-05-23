@@ -14,7 +14,6 @@ export default function ThemeToggle() {
         aria-label="Toggle visual mode"
       >
         <motion.div
-          layout
           transition={{ type: "spring", stiffness: 700, damping: 30 }}
           className="h-4.5 w-4.5 rounded-full bg-neutral-400 group-hover:bg-neutral-200"
           style={{

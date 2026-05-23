@@ -118,7 +118,6 @@ export default function Sidebar() {
           aria-label="Toggle visual mode"
         >
           <motion.div
-            layout
             transition={{ type: "spring", stiffness: 700, damping: 30 }}
             className="h-3.5 w-3.5 rounded-full bg-neutral-400 group-hover:bg-neutral-200"
             style={{
