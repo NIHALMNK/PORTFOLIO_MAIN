@@ -45,26 +45,25 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[120px] flex-col justify-between pt-16 pb-6 pl-6 pr-2 z-40 bg-black text-[#5f5f5f] antialiased select-none">
-        {/* Navigation & Social Icons Stack grouped tightly at the top */}
-        <div className="flex flex-col gap-8">
+      <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[140px] flex-col justify-between py-12 px-4 z-40 bg-black text-[#5f5f5f] antialiased select-none items-center">
+        {/* Navigation & Social Icons Stack grouped and centered vertically */}
+        <div className="flex flex-col gap-10 my-auto items-center">
           {/* Navigation */}
-          <nav className="flex flex-col gap-[10px]">
+          <nav className="flex flex-col gap-[18px] items-center">
             {navItems.map((item) => {
               const isActive = pathname === item.path;
               return (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className={`group relative w-fit text-[11px] font-[200] tracking-[0.16em] leading-[1.8] uppercase transition-all duration-300 ease-out select-none ${
-                    isActive ? "text-[#d8d8d8]" : "text-[#5f5f5f] hover:text-[#d8d8d8]/80"
-                  }`}
+                  className={`group relative w-fit text-[16px] font-[200] tracking-[0.16em] leading-[1.8] uppercase transition-all duration-300 ease-out select-none ${isActive ? "text-[#d8d8d8]" : "text-[#5f5f5f] hover:text-[#d8d8d8]/80"
+                    }`}
                 >
                   {item.label}
                   {isActive && (
                     <motion.div
                       layoutId="activeUnderline"
-                      className="absolute -bottom-0.5 left-0 w-[50px] h-[1px] bg-[#d8d8d8]/40"
+                      className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[40px] h-[1px] bg-[#d8d8d8]/40"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -74,7 +73,7 @@ export default function Sidebar() {
           </nav>
 
           {/* Social Icons Stack */}
-          <div className="flex flex-col gap-[12px] pl-[1px]">
+          <div className="flex flex-col gap-[20px] items-center">
             {socials.map((soc, idx) => {
               return (
                 <a
@@ -83,11 +82,11 @@ export default function Sidebar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={soc.label}
-                  className="text-[#5f5f5f] opacity-45 hover:opacity-85 hover:text-[#d8d8d8] transition-all duration-300 ease-out w-fit"
+                  className="text-[#5f5f5f] opacity-45 hover:opacity-85 hover:text-[#d8d8d8] transition-all duration-300 ease-out"
                 >
                   <Icon
                     icon={soc.icon}
-                    className="w-[13px] h-[13px]"
+                    className="w-[22px] h-[22px]"
                   />
                 </a>
               );
@@ -95,8 +94,8 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* Muted Copyright Text at absolute bottom left */}
-        <div className="text-[8.5px] font-[200] tracking-[0.08em] uppercase text-white/15 select-none antialiased mb-2">
+        {/* Muted Copyright Text at bottom center */}
+        <div className="text-[8.5px] font-[200] tracking-[0.08em] uppercase text-white/15 select-none antialiased mb-2 text-center">
           © NIHAL_MNK
         </div>
       </aside>
@@ -152,7 +151,7 @@ export default function Sidebar() {
             </div>
 
             {/* Stacked Vertical Menu */}
-            <nav className="flex flex-col gap-6 items-start mt-10">
+            <nav className="flex flex-col gap-10 items-start mt-10">
               {navItems.map((item) => {
                 const isActive = pathname === item.path;
                 return (
@@ -160,9 +159,8 @@ export default function Sidebar() {
                     key={item.label}
                     href={item.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`text-[20px] font-[200] tracking-[0.16em] uppercase transition-all duration-300 ease-out select-none antialiased subpixel-antialiased ${
-                      isActive ? "text-[#d8d8d8]" : "text-[#5f5f5f] hover:text-[#d8d8d8]"
-                    }`}
+                    className={`text-[30px] font-[200] tracking-[0.16em] uppercase transition-all duration-300 ease-out select-none antialiased subpixel-antialiased ${isActive ? "text-[#d8d8d8]" : "text-[#5f5f5f] hover:text-[#d8d8d8]"
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -171,7 +169,7 @@ export default function Sidebar() {
             </nav>
 
             {/* Social Icons at bottom left */}
-            <div className="flex flex-col gap-4 pl-[1px] mb-2">
+            <div className="flex flex-col gap-8 pl-[1px] mb-2">
               {socials.map((soc, idx) => {
                 return (
                   <a
@@ -185,7 +183,7 @@ export default function Sidebar() {
                   >
                     <Icon
                       icon={soc.icon}
-                      className="w-[14px] h-[14px]"
+                      className="w-[24px] h-[24px]"
                     />
                   </a>
                 );
