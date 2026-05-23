@@ -11,26 +11,15 @@ export default function FooterLinks() {
   ];
 
   return (
-    <footer className="relative w-full min-h-[260px] px-8 lg:px-14 py-10">
-
-      {/* Left Side: Copyright (positioned absolute bottom-left) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="absolute left-8 lg:left-14 bottom-6 text-[11px] tracking-[0.14em] uppercase text-white/18 select-none"
-      >
-        © NIHAL_MNK
-      </motion.div>
-
-      {/* Right Side: Stacked links (positioned absolute top-right) */}
+    <footer className="relative w-full px-8 lg:px-14 py-16 flex justify-end">
+      
+      {/* Stacked Navigation Links */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-        className="absolute right-8 lg:right-14 top-10 flex flex-col space-y-5 items-end"
+        className="flex flex-col space-y-5 items-end"
       >
         {links.map((link, idx) => (
           <Link

@@ -6,11 +6,11 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import { siteConfig } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
+import MusicToggle from "@/components/MusicToggle";
 
 export default function Sidebar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
 
   const navItems = [
     { label: "HOME", path: "/" },
@@ -111,21 +111,10 @@ export default function Sidebar() {
           <Icon icon="feather:menu" className="w-5 h-5" />
         </button>
 
-        {/* Right: Mock theme switch (capsule design matching desktop) */}
-        <button
-          onClick={() => setIsDark(!isDark)}
-          className="group relative flex h-5 w-10 cursor-pointer items-center rounded-full border border-neutral-800 bg-neutral-950 p-0.5 transition-colors duration-300 hover:border-neutral-700"
-          aria-label="Toggle visual mode"
-        >
-          <motion.div
-            transition={{ type: "spring", stiffness: 700, damping: 30 }}
-            className="h-3.5 w-3.5 rounded-full bg-neutral-400 group-hover:bg-neutral-200"
-            style={{
-              marginLeft: isDark ? "auto" : "0",
-              marginRight: isDark ? "0" : "auto",
-            }}
-          />
-        </button>
+        {/* Right: Premium Music Toggle (capsule design matching desktop) */}
+        <div className="-mr-6 -my-6 scale-90">
+          <MusicToggle />
+        </div>
       </header>
 
       {/* Mobile Overlay Sidebar Menu */}

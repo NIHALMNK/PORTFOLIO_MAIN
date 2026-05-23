@@ -3,7 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import ThemeToggle from "@/components/ThemeToggle";
+import MusicToggle from "@/components/MusicToggle";
 import SmoothScroll from "@/components/SmoothScroll";
 
 // Set up Google Font Inter for clean editorial sans-serif typography
@@ -70,7 +70,7 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col w-full bg-[#151515] overflow-hidden max-w-screen-2xl mx-auto relative border-x border-neutral-900/10 shadow-2xl">
             {/* Top-Right Toggle */}
             <div className="absolute top-0 right-0 z-50 hidden lg:block">
-              <ThemeToggle />
+              <MusicToggle />
             </div>
 
             {/* Sidebar Navigation */}
