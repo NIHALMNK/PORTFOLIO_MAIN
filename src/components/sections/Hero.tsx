@@ -62,6 +62,32 @@ export default function Hero() {
             {siteConfig.description}
           </p>
 
+          {/* Minimalist Editorial Resume Button */}
+          <a
+            href="/resume/nihal_resume.pdf"
+            target="_blank"
+            download
+            className="
+              inline-flex items-center gap-2
+              mt-8
+              px-5 py-2
+              border border-white/10
+              rounded-full
+              text-[11px] md:text-[12px]
+              tracking-[0.25em]
+              uppercase
+              text-white/70
+              hover:text-white
+              hover:border-white/30
+              transition-all duration-300 ease-out
+              bg-transparent
+              antialiased
+            "
+          >
+            Resume
+            <span className="text-[10px] md:text-[11px] translate-y-[0.5px]">↓</span>
+          </a>
+
           {/* Email block on Mobile only */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
