@@ -64,7 +64,7 @@ export default function Hero() {
 
           {/* Minimalist Editorial Resume Button */}
           <a
-            href="/resume/nihal_resume.pdf"
+            href="/resume/Mohammed_Nihal_FullStack_Developer_Resume.pdf"
             target="_blank"
             download
             className="
